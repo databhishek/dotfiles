@@ -1,6 +1,10 @@
 {
+	"bold_folder_labels": false,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Agila Theme/Agila Oceanic Next.tmTheme",
+	"color_scheme": "Packages/Enki Theme/scheme/Enki-Alt.tmTheme",
+	"draw_minimap_border": true,
+	"enki_theme_small_statusbar": true,
+	"enki_theme_small_tab": true,
 	"font_face": "Roboto Mono",
 	"font_size": 13,
 	"highlight_line": true,
@@ -8,13 +12,9 @@
 	[
 		"Vintage"
 	],
+	"overlay_scroll_bars": "enabled",
 	"tab_size": 2,
-	"theme": "ayu-dark.sublime-theme",
+	"theme": "Enki-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"ui_big_tabs": true,
-	"ui_fix_tab_labels": true,
-	"ui_font_size_small": true,
-	"ui_font_source_code_pro": true,
-	"ui_separator": true,
-	"ui_wide_scrollbars": true
+	"word_wrap": "true"
 }
