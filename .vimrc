@@ -76,10 +76,12 @@ Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'bling/vim-airline'
+set laststatus=2
 Bundle 'scrooloose/nerdtree'
-autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 Bundle 'tpope/vim-fugitive'
+Bundle 'morhetz/gruvbox'
 
 
 " We have to turn this stuff back on if we want all of our features.
@@ -177,4 +179,4 @@ set number
 " link above (back up where we included the bundle of a ton of themes.)
 set background=dark
 set t_Co=256
-colorscheme monokai-phoenix
+colorscheme gruvbox
