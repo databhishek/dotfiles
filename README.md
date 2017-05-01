@@ -1,6 +1,6 @@
-# dotfiles
+# Screenshots
 
-## My Vim
+## Vim
 
 ![vim](/screenshots/vim.png)
 
