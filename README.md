@@ -2,11 +2,11 @@
 
 ## My Vim
 
-![vim](vim.png)
+![vim](/screenshots/vim.png)
 
 ---
 
 ## Sublime Text 3
 
-![sublime](sublime3.png)
+![sublime](/screenshots/sublime3.png)
 
