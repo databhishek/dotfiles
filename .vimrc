@@ -82,7 +82,8 @@ map <C-n> :NERDTreeToggle<CR>
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'morhetz/gruvbox'
-
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
 
 " We have to turn this stuff back on if we want all of our features.
 filetype plugin indent on " Filetype auto-detection
