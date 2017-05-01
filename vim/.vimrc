@@ -95,7 +95,7 @@ set laststatus=2
 " remap ctrlp to ctrl-t
 let g:ctrlp_map = '<c-t>'
 
-" Let ctrlp have up to 30 results.
+" let ctrlp have up to 30 results.
 let g:ctrlp_max_height = 30
 
 set number
