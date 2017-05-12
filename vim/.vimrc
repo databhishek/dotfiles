@@ -20,6 +20,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'morhetz/gruvbox'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
+Bundle 'lervag/vimtex'
 
 syntax on " syntax highlighting
 
