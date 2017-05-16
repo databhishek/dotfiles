@@ -4,23 +4,26 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'flazz/vim-colorschemes'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-commentary'
-Bundle 'pangloss/vim-javascript'
-Bundle 'indenthtml.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'groenewege/vim-less'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'bling/vim-airline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'morhetz/gruvbox'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'lervag/vimtex'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'pangloss/vim-javascript'
+Plugin 'indenthtml.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'groenewege/vim-less'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'lervag/vimtex'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'xuhdev/vim-latex-live-preview'
 
 syntax on " syntax highlighting
 
