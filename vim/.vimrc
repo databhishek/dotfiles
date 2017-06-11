@@ -1,16 +1,14 @@
-set nocompatible " fuck VI
+set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'flazz/vim-colorschemes'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'wakatime/vim-wakatime'
 Plugin 'tpope/vim-commentary'
-Plugin 'pangloss/vim-javascript'
-Plugin 'indenthtml.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'groenewege/vim-less'
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -22,89 +20,79 @@ Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'xuhdev/vim-latex-live-preview'
 
-syntax on " syntax highlighting
+call vundle#end()
+filetype plugin indent on
 
+syntax on
+
+" indent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab " use spaces instead of tabs.
-set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
-set shiftround " tab / shifting moves to closest tabstop.
-set autoindent " match indents on new lines.
-set smartindent " intellegently dedent / indent new lines based on rules.
+set smarttab
+set shiftround
+set autoindent
+set smartindent
 
-" vcs ftw
+" vcs
 set nobackup
 set nowritebackup 
 set noswapfile 
 
-set hidden " allow me to have buffers with unsaved changes
-set autoread " autoload changed file on disk
+set hidden
+set autoread
 
 " search
-set ignorecase " case insensitive search
-set smartcase " if there are uppercase letters, become case-sensitive
-set incsearch " live incremental searching
-set showmatch " live match highlighting
-set hlsearch " highlight matches
-set gdefault " use the `g` flag by default
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+set gdefault
 
-" allow the cursor to go anywhere in visual block mode
 set virtualedit+=block
 
-" leader is a key that allows you to have your own "namespace" of keybindings
 let mapleader = ","
 
-" no shift for command mode
+" no shift command mode
 nnoremap ; :
 vnoremap ; :
 
-" no escape for insert mode
+" no escape insert mode
 inoremap jf <esc>
 
-" create new vsplit, and switch to it
+" vsplit
 noremap <leader>v <C-w>v
 
-" bindings for easy split nav
+" split nav
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" use sane regex's when searching
 nnoremap / /\v
 vnoremap / /\v
-
-" clear match highlighting
-noremap <leader><space> :noh<cr>:call clearmatches()<cr>
-
-" quick buffer switching - like cmd-tab'ing
-nnoremap <leader><leader> <c-^>
 
 noremap j gj
 noremap k gk
 
-" map the key for toggling comments with vim-commentary
+" vim-commentary
 nnoremap <leader>c <Plug>CommentaryLine
 
-" map nerdtree
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-" make vim-airline work
+" airline
 set laststatus=2
 
-" remap ctrlp to ctrl-t
+" ctrlp
 let g:ctrlp_map = '<c-t>'
-
-" let ctrlp have up to 30 results.
 let g:ctrlp_max_height = 30
 
 set number
 
-" colorscheme settings
+" colorscheme
 set background=dark
-set t_Co=256
 colorscheme gruvbox
