@@ -94,5 +94,6 @@ let g:ctrlp_max_height = 30
 set number
 
 " colorscheme
+set t_Co=256
 set background=dark
 colorscheme gruvbox
