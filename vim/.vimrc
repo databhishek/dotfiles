@@ -16,7 +16,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
@@ -96,4 +95,4 @@ set number
 " colorscheme
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+colorscheme badwolf
