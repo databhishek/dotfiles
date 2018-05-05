@@ -7,10 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
-Plugin 'groenewege/vim-less'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -20,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
 filetype plugin indent on
@@ -95,4 +94,4 @@ set number
 " colorscheme
 set t_Co=256
 set background=dark
-colorscheme badwolf
+colorscheme PaperColor
