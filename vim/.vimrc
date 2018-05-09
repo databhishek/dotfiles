@@ -6,19 +6,20 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'danro/rename.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
-Plugin 'lervag/vimtex'
-Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
@@ -33,6 +34,7 @@ set smarttab
 set shiftround
 set autoindent
 set smartindent
+nnoremap <C-i> gg=G
 
 " vcs
 set nobackup
@@ -85,13 +87,15 @@ map <C-n> :NERDTreeToggle<CR>
 " airline
 set laststatus=2
 
-" ctrlp
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_max_height = 30
+" fzf
+set rtp+=~/.fzf
+map <C-t> :Files<CR>
 
 set number
 
 " colorscheme
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+set termguicolors
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
