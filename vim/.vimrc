@@ -5,13 +5,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'mileszs/ack.vim'
 Plugin 'junegunn/fzf.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-markdown'
 Plugin 'danro/rename.vim'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
@@ -19,7 +17,14 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'junegunn/goyo.vim'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'w0rp/ale'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 call vundle#end()
 filetype plugin indent on
@@ -66,6 +71,9 @@ inoremap jf <esc>
 " vsplit
 noremap <leader>v <C-w>v
 
+" MRU
+map <leader>f :MRU<CR>
+
 " split nav
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -82,20 +90,18 @@ noremap k gk
 nnoremap <leader>c <Plug>CommentaryLine
 
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :lugin 'mileszs/ack.vim'NERDTreeToggle<CR>
 
 " airline
 set laststatus=2
 
 " fzf
 set rtp+=~/.fzf
-map <C-t> :Files<CR>
+map <C-f> :Files<CR>
 
 set number
 
 " colorscheme
 set t_Co=256
 set background=dark
-set termguicolors
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme PaperColor

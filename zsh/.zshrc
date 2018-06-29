@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME="spaceship"
@@ -90,8 +90,6 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-#autojump
-. /usr/share/autojump/autojump.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -107,5 +105,12 @@ alias veml="source ~/envs/veml/bin/activate"
 alias o="gio open"
 alias chrome="google-chrome-stable"
 alias c="clear"
+
+function setgov () {
+     for i in {0..3}; 
+     do 
+         cpufreq-set -c $i -g $1; 
+     done
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
