@@ -1,17 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/abhishek/.oh-my-zsh
+export ZSH=/home/abhishek/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME="spaceship"
-# cause zsh load theme from this variable instead of
+# cause zsh load theme from this variable instead ofauto
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "candy" )
@@ -60,7 +67,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  command-not-found
   zsh-syntax-highlighting
+  zsh-autosuggestions
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -85,12 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-
-#GoPath
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,18 +103,12 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias venv3="source ~/envs/venv3/bin/activate"
-alias venv="source ~/envs/venv/bin/activate"
-alias veml="source ~/envs/veml/bin/activate"
+
 alias o="gio open"
-alias chrome="google-chrome-stable"
-alias c="clear"
+alias veml="source ~/envs/veml/bin/activate"
+alias venv3="source ~/envs/venv3/bin/activate"
 
-function setgov () {
-     for i in {0..3}; 
-     do 
-         cpufreq-set -c $i -g $1; 
-     done
-}
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.npmglobal/bin:/home/abhishek/.local/bin:$HOME/.cargo/bin:/usr/local/go/bin
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

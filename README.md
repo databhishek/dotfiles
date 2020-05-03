@@ -1,5 +1,3 @@
 # dotfiles
 
-## Vim
-
-![vim](/vim/vim.png)
+Exactly what you expect.
