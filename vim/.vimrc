@@ -1,23 +1,22 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-markdown'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'dense-analysis/ale'
-Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
-Plugin 'neoclide/coc.vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-markdown'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-surround'
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 syntax on
