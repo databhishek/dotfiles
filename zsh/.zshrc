@@ -105,10 +105,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias o="gio open"
+alias c="clear"
+alias vim="nvim"
+alias mx="tmux"
+
 alias veml="source ~/envs/veml/bin/activate"
 alias venv3="source ~/envs/venv3/bin/activate"
 
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.npmglobal/bin:/home/abhishek/.local/bin:$HOME/.cargo/bin:/usr/local/go/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.npmglobal/bin:/home/abhishek/.local/bin:$HOME/.cargo/bin:/usr/local/go/bin:$HOME/Utils/flutter/bin:$HOME/Utils/android-studio/bin:$HOME/.rbenv/bin
+export EDITOR=vim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(rbenv init -)"
+
