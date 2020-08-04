@@ -3,18 +3,23 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
+" editor plugins
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
+
+" language specific plugins
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" theming plugins
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim'
 
 call plug#end()
 filetype plugin indent on
@@ -107,6 +112,7 @@ let g:coc_global_extensions = [
       \ 'coc-prettier', 
       \ 'coc-json',
       \ 'coc-css',
+      \ 'coc-python',
       \ ]
 " rest of the config is copied from coc.nvim readme
 " Give more space for displaying messages.
