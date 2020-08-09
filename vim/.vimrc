@@ -16,6 +16,7 @@ Plug 'tpope/vim-surround'
 
 " language specific plugins
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'lervag/vimtex'
 
 " theming plugins
 Plug 'vim-airline/vim-airline-themes'
@@ -85,6 +86,9 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI=1
+
+" vimtex
+let g:tex_flavor = "latex"
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
